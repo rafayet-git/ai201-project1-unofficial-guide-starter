@@ -9,7 +9,9 @@
 
 ## Domain
 
-<!-- What domain did you choose? Why is this knowledge valuable and hard to find through official channels? -->
+The domain is reviews for budget smartphones that are $300 or less
+
+This guide will make it easier for users to find a perfect smartphone in their budget. It will be based on public user reviews and coments, as well as professional reviews and tests. Typically, anyone who wanted to access this information would need to browse multiple websites and blindly trust random opinions in the internet, which makes it harder to make an informed decision on their smartphone. The guide gives them the information needed to make their next purchase.
 
 ---
 
@@ -17,20 +19,26 @@
 
 <!-- List your specific sources: URLs, subreddit names, forum threads, or file descriptions.
      Aim for at least 10 sources that together cover different subtopics or perspectives within your domain. -->
+| # | Source | Type | URL or file path |
+|---|--------|------|-----------------|
+| 1 | Best entry-level smartphones guide | Buyer's guide | https://www.gsmarena.com/best_entry_level_smartphones_buyers_guide-review-2034.php |
+| 2 | Nothing CMF Phone 2 review | Pro review | https://www.gsmarena.com/nothing_cmf_phone_2_pro-review-2827.php |
+| 3 | Nothing CMF Phone 2 review user comments | User reviews | https://www.gsmarena.com/nothing_cmf_phone_2_pro_5g-reviews-13821.php |
+| 4 | Pixel 9a review | Pro review | https://www.gsmarena.com/google_pixel_9a-review-2825.php |
+| 5 | Pixel 9a user comments | User reviews | https://www.gsmarena.com/google_pixel_9a-reviews-13478.php |
+| 6 | Nothing CMF Phone 2 review from PhoneArena | Pro review | https://www.phonearena.com/reviews/cmf-phone-2-pro-review_id7240 |
+| 7 | Budget and affordable phones | Buyer's guide | https://www.phonearena.com/news/Budget-affordable-cheap-low-cost-smartphones-android-this-year_id58696 |
+| 8 | Best cheap phones | Buyer's guide | https://www.tomsguide.com/best-picks/best-cheap-phones |
+| 9 | Best phones under $300 | Buyer's guide | https://www.androidcentral.com/best-android-phones-under-300 |
+| 10 | Best phones under $300 in 2026 | Buyer's guide | https://www.techtimes.com/articles/313609/20251225/best-smartphones-buy-under-300-2026.htm |
 
-| # | Source | Description | URL or location |
-|---|--------|-------------|-----------------|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
-| 4 | | | |
-| 5 | | | |
-| 6 | | | |
-| 7 | | | |
-| 8 | | | |
-| 9 | | | |
-| 10 | | | |
 
+Questions:
+1. What phones under $300 have the best storage?
+2. What phones under $300 have the best camera?
+3. Does the CMF Phone 2/Pixel 9a have overheating issues?
+4. What downsides do reviewers report about the CMF Phone 2/Pixel 9a?
+5. What phones under $300 have the best battery capacity? 
 ---
 
 ## Chunking Strategy
