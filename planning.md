@@ -1,10 +1,5 @@
 # Project 1 Planning: The Unofficial Guide
 
-> Write this document before you write any pipeline code.
-> Your spec and architecture diagram are what you'll use to direct AI tools (Claude, Copilot, etc.) to generate your implementation — the more specific they are, the more useful the generated code will be.
-> Update the Retrieval Approach and Chunking Strategy sections if you change your approach during implementation.
-> Update this file before starting any stretch features.
-
 ---
 
 ## Domain
@@ -32,82 +27,70 @@ This guide will make it easier for users to find a perfect smartphone in their b
 | 9 | Best phones under $300 | Buyer's guide | https://www.androidcentral.com/best-android-phones-under-300 |
 | 10 | Best phones under $300 in 2026 | Buyer's guide | https://www.techtimes.com/articles/313609/20251225/best-smartphones-buy-under-300-2026.htm |
 
-
-Questions:
-1. What phones under $300 have the best storage?
-2. What phones under $300 have the best camera?
-3. Does the CMF Phone 2/Pixel 9a have overheating issues?
-4. What downsides do reviewers report about the CMF Phone 2/Pixel 9a?
-5. What phones under $300 have the best battery capacity? 
 ---
 
 ## Chunking Strategy
 
-<!-- How will you split documents into chunks?
-     State your chunk size (in tokens or characters), overlap size, and explain why those
-     numbers fit the structure of your documents.
-     A review-heavy corpus warrants different chunking than a long FAQ. -->
+**Chunk size:** Semantic chunking per-paragraph
 
-**Chunk size:**
+**Overlap:** 20%
 
-**Overlap:**
-
-**Reasoning:**
+**Reasoning:** Most of our articles are composed of multiple paragraphs, which are usually talking about different ideas. However, some information provided in the previous or next paragrang can give slightly more context to the paragraph, so the overlap is helpful.
 
 ---
 
 ## Retrieval Approach
 
-<!-- Which embedding model are you using (e.g., all-MiniLM-L6-v2 via sentence-transformers)?
-     How many chunks will you retrieve per query (top-k)?
-     If you were deploying this for real users and cost wasn't a constraint, what tradeoffs
-     would you weigh in choosing a different embedding model — context length, multilingual
-     support, accuracy on domain-specific text, latency? -->
+**Embedding model:** all-MiniLM-L6-v2
 
-**Embedding model:**
+**Top-k:** 4
 
-**Top-k:**
-
-**Production tradeoff reflection:**
+**Production tradeoff reflection:** A different model, such as an online model, would marginally improve accuracy and context, however wouldnt help us enough as our text is small. It would also have higher latency as it would not run locally.
 
 ---
 
 ## Evaluation Plan
 
-<!-- List your 5 test questions with their expected correct answers.
-     Questions should be specific enough that you can judge whether the system's response
-     is right or wrong. "What are good dining halls?" is too vague.
-     "What do students say about wait times at [dining hall name] during lunch?" is testable. -->
-
 | # | Question | Expected answer |
 |---|----------|-----------------|
-| 1 | | |
-| 2 | | |
-| 3 | | |
-| 4 | | |
-| 5 | | |
+| 1 | What phones under $300 have the longest battery life in testing? | The Moto G at 19 hours |
+| 2 | What phones under $300 have the best camera? | Pixel 9a for photography/software processing; CMF Phone 2 Pro for its 50MP telephoto |
+| 3 | Does the CMF Phone 2 / Pixel 9a have overheating issues? | Pixel 9a: yes, owners report it gets warm even just browsing Chrome. CMF Phone 2 Pro: no notable overheating reported |
+| 4 | What downsides do reviewers report about the CMF Phone 2 / Pixel 9a? | CMF Phone 2 Pro: no charger in box, only IP54, weak speaker, no eSIM. Pixel 9a: large bezels, thermal warmth, performance complaints |
+| 5 | How many years of security updates does the CMF Phone 2 / Pixel 9a get? | CMF Phone 2 Pro: 6 years. Pixel 9a: 7 years. |
 
 ---
 
 ## Anticipated Challenges
 
-<!-- What could go wrong? Name at least two specific risks with reasoning.
-     Consider: noisy or inconsistent documents, missing source attribution, off-topic
-     retrieval, chunks that split key information across boundaries. -->
+1. The user reviews are very noisy and contradictory, so it might have issues with choosing which to choose in answering a user's questions.
 
-1.
-
-2.
+2. There are more sources about the two phones (Pixel 9A and the CMF Phone 2) than the ones listed in the compact budget phone guides, so it might be more biased.
 
 ---
 
 ## Architecture
 
-<!-- Draw a diagram of your pipeline showing the five stages:
-     Document Ingestion → Chunking → Embedding + Vector Store → Retrieval → Generation
-     Label each stage with the tool or library you're using.
-     You can use ASCII art, a Mermaid diagram, or embed a sketch as an image.
-     You'll use this diagram as context when prompting AI tools to implement each stage. -->
+[0] documents/ (.html/.txt/.pdf)
+        |
+        v
+[1] Ingestion - pdfplumber / file read, strip HTML
+        |
+        v
+[2] Chunking - paragraph-aware semantic chunking, 20% overlap
+        |
+        v
+[3] Embedding + Store - all-MiniLM-L6-v2 (sentence-transformers) -> ChromaDB
+        |
+        v
+[4] Retrieval - query embedding -> Chroma top-k=4 similarity search
+        |
+        v
+[5] Generation - Groq LLM + grounding prompt -> answer w/ sources
+        |
+        v
+[6] Interface (Streamlit)
+
 
 ---
 
@@ -123,8 +106,8 @@ Questions:
      "I'll give Claude my Chunking Strategy section and ask it to implement chunk_text()
      with my specified chunk size and overlap" is a plan. -->
 
-**Milestone 3 — Ingestion and chunking:**
+**Milestone 3 — Ingestion and chunking:** Using Claude, i will provide the Chunking Strategy section and ask it to implement chunk_text() with semantic chunking and a 20% overlap, I will verifiy it by printing the chunk count and ensuring that the chunking algorithim does not split sentences.
 
-**Milestone 4 — Embedding and retrieval:**
+**Milestone 4 — Embedding and retrieval:** I'll provide Claude my Retrieval Appriach section ad ask it to embed chunks with my provided model and store them in ChromaDB, as well as a top-k query function. I will verify this by querying my questions and checking if the returned chunks are on-topic.
 
-**Milestone 5 — Generation and interface:**
+**Milestone 5 — Generation and interface:** Using Claude, I will provide my grounding requirements: answer only from the retrieved chunks, refusing if the context does not contain the answer, and cite the source of each claim. I will ask it to write the Groq prompt that formats the top-k=4 chunks into the context and enforces those rules, plus a Streamlit interface with a query box that displays the answer and its cited sources. I will verify by running my 5 evaluation questions and confirming sources appear, and by asking an out-of-domain question (unrelated to phones or a flagship smartphone) to confirm it refuses instead of hallucinating.
