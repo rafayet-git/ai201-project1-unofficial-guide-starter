@@ -76,10 +76,10 @@ This guide will make it easier for users to find a perfect smartphone in their b
 | # | Question | Expected answer | System response (summarized) | Retrieval quality | Response accuracy |
 |---|----------|-----------------|------------------------------|-------------------|-------------------|
 | 1 | What phones under $300 have the longest battery life in testing? | Moto G ~19 hours | Moto G 2026 at 19h 10m; Phone 4a Pro past 18h. Noted prices weren't stated in context. Cited Tom's Guide. | Relevant | Accurate |
-| 2 | What phones under $300 have the best camera? | Pixel 9a (photography/software); CMF Phone 2 Pro (50MP telephoto) | Refused — "I don't have enough information." | Partially relevant | Inaccurate |
+| 2 | What phones under $300 have the best camera? | Pixel 9a (photography/software); CMF Phone 2 Pro (50MP telephoto) | Refused | Partially relevant | Inaccurate |
 | 3 | Does the CMF Phone 2 / Pixel 9a have overheating issues? | Pixel 9a: owners report it gets warm; CMF: no notable issues | Said neither overheats; both manage heat well. Cited the pro-review software/performance pages. | Relevant | Partially accurate |
 | 4 | What downsides do reviewers report about the CMF Phone 2 / Pixel 9a? | CMF: no charger, IP54, weak speaker, no eSIM. Pixel: bezels, warmth, performance | Strong CMF list (design/screws/lint, one weak speaker, gimmicky lenses). Said Pixel not mentioned in context. | Partially relevant | Partially accurate |
-| 5 | How many years of security updates does the CMF Phone 2 / Pixel 9a get? | CMF: 3 major OS updates; Pixel: 7 years | Refused — "I don't have enough information." | Partially relevant | Inaccurate |
+| 5 | How many years of security updates does the CMF Phone 2 / Pixel 9a get? | CMF: 3 major OS updates; Pixel: 7 years | Refused | Partially relevant | Inaccurate |
 
 **Retrieval quality:** 2 Relevant, 3 Partially Relevant, 
 
