@@ -1,43 +1,24 @@
 Google Pixel 9a review: Our lab tests - display, battery life, c...
-Search
-TIP US 2.1M 160K RSS EV MERCH L OG IN S IGN UP
 Google Pixel 9a review
 3. Our lab tests - display, battery life, charging speed, speaker
-POPULAR REVIEWS
 Google Android
 Display
 The Pixel 9a has a slightly larger display than the Pixel 8a. At 6.3 inches in diagonal, it aligns
-XIAOMI 17T PRO REVIEW
 with what the regular Pixel 9 offers. The resolution is the same at 1080x2424 pixels as well.
 This results in a crisp pixel density of around 422 ppi. Just like the Pixel 9, the Pixel 9a
 advertises 1,800 nits of whole display brightness in high brightness mode and a peak of 2,700
 nits.
-SONY XPERIA 1 VIII REVIEW
-XIAOMI 17T REVIEW
-ELECTRIC VEHICLES
 We did our standardized measurements and got great figures for the Pixel 9a: 1,248 nits by
 maxing out the slider and a whopping 1,930 nits in max auto mode. While this is a great result
 and one that ranks very high in the brightness charts for this price category, it is worth noting
 that the Pixel 9 and Pixel 9 Pro still managed notably higher values in our testing. Even so, the
 Pixel 9a has more than enough brightness to be perfectly usable even in direct sunlight.
 Google Pixel 9a review: Our lab tests - display, battery life, c...
-Search
-TIP US 2.1M 160K RSS EV MERCH L OG IN S IGN UP
 Google Pixel 9a review: Our lab tests - display, battery life, c...
-Search
-TIP US 2.1M 160K RSS EV MERCH L OG IN S IGN UP
 Google Pixel 9a review: Our lab tests - display, battery life, c...
-Search
-TIP US 2.1M 160K RSS EV MERCH L OG IN S IGN UP
 Google Pixel 9a review: Our lab tests - display, battery life, c...
-Search
-TIP US 2.1M 160K RSS EV MERCH L OG IN S IGN UP
 Google Pixel 9a review: Our lab tests - display, battery life, c...
-Search
-TIP US 2.1M 160K RSS EV MERCH L OG IN S IGN UP
 Google Pixel 9a review: Our lab tests - display, battery life, c...
-Search
-TIP US 2.1M 160K RSS EV MERCH L OG IN S IGN UP
 Max display brightness test
 White test pattern, 75% fill (nits)
 Manual mode Auto mode
@@ -62,8 +43,6 @@ Just like the Pixel 9, the Pixel 9a has a 120Hz maximum refresh rate. Google doe
 mess about too much with the refresh rate. There is just a single Smooth display toggle in the
 Google Pixel 9a review: Our lab tests - display, battery life, c...
 settings menu. Once enabled, you enter an automatic mode where the phone decides which
-Search
-TIP US 2.1M 160K RSS EV MERCH L OG IN S IGN UP
 content to use a high refresh rate for and which not to. Your only other option is to have the
 toggle off and be stuck at a constant 60Hz.
 While the phone is pretty happy to boost to 120Hz for most apps and the UI in general, we
@@ -88,7 +67,6 @@ Google
 Pixel 9a
 5100 mAh
 Google Pixel 9a review: Our lab tests - display, battery life, c...
-Search
 12:42h TIP US 2.1M 160K RS S EV MER CH L OG IN S IGN UP
 25:05h 11:02h 14:29h 8:44h
 Google
@@ -119,8 +97,6 @@ The Pixel 9a supports up to 23W USB-PD fast charging and up to 7.5W Qi-wireless 
 Since the phone doesn't come with a charger, we had to source one ourselves for testing. We
 used a 30W Google-branded PD charger.
 Google Pixel 9a review: Our lab tests - display, battery life, c...
-Search
-TIP US 2.1M 160K RSS EV MERCH L OG IN S IGN UP
 Charging speed
 in 15 min in 30 min Time to full charge
 (from 0%)
@@ -154,8 +130,6 @@ The Pixel 9a has a stereo speaker system of the hybrid variety. There is a dedic
 firing speaker, and the other channel is handled by an amplified, front-facing earpiece. This
 innately brings some imbalance to the sound output, but it's not that bad in practice.
 Google Pixel 9a review: Our lab tests - display, battery life, c...
-Search
-TIP US 2.1M 160K RSS EV MERCH L OG IN S IGN UP
 The Pixel 9a has a pretty good loudness, managing a Good loudness score in our testing.
 That's about on par with the Pixel 8a but not as loud as the vanilla Pixel 9. The quality of the
 sound is good, with clean and clear mids. Not too much highs or bass, though.
@@ -192,8 +166,6 @@ Speaker frequency response
 Google Pixel 9a Google Pixel 9 Samsung Galax… Xiaomi Poco F7…
 Google Pixel 9a review: Our lab tests - display, battery life, c...
 Google Pixel 9a Google Pixel 9 Samsung Galax… Xiaomi Poco F7…
-Search
-TIP US 2.1M 160K RSS EV MERCH L OG IN S IGN UP
 Use the Playback controls to listen to the phone sample recordings (best use headphones).
 We measure the average loudness of the speakers in LUFS. A lower absolute value means a
 louder sound. A look at the frequency response chart will tell you how far off the ideal "0db" flat
@@ -218,4 +190,3 @@ NEXT PAGE » 4. Software and performance
 3. Our lab tests - display, battery life, charging speed, speaker
 Reviews Google Pixel 9a review Page 3
 PIXEL 9A USER REVIEWS COMMENTS (108)
-© 2000-2026 GSMArena.com Mobile version Android app Tools Contact us Merch store Privacy Terms of use

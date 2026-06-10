@@ -30,7 +30,13 @@ NAV_SNIPPETS = [
     "sort by:", "pages:", "hits", "specifications", "compare", "pictures",
     "show all deals", "related devices", "popular from", "more from",
     "more related", "gb ram", "show more",
+    "tip us", "merch", "mobile version", "android app", "contact us",
+    "terms of use", "popular reviews", "show all prices", "electric vehicles",
+    "to top", "to footer", "gsmarena.com tests", "total of", "rss ev",
 ]
+
+# Exact lines that are pure nav and never content.
+EXACT_DROP = {"search", "introduction", "pricing"}
 # Brand-list nav rows (e.g. advertisements). If a line is mostly these tokens, it's not related content.
 BRAND_TOKENS = {
     "samsung", "xiaomi", "ulefone", "infinix", "apple", "google", "alcatel",
@@ -90,13 +96,20 @@ def clean_text(raw: str, url: str) -> str:
         if FOOTER_RE.match(line):
             continue
         low = line.lower()
+        if low in EXACT_DROP:
+            continue
         if any(snip in low for snip in NAV_SNIPPETS):
+            continue
+        if "©" in line:                    # footer copyright line
             continue
         if _is_brand_nav(line):
             continue
         if DOUBLED_RE.search(line): # bold-rendering spec gibberish
             continue
         if PRICE_RE.search(line):# deal-box sidebar prices
+            continue
+        # All-caps "popular reviews" sidebar links (e.g. "XIAOMI 17T PRO REVIEW").
+        if line.isupper() and line.endswith("REVIEW"):
             continue
         # Drop very short all-caps menu fragments (e.g. "REPLY", "REVIEW")
         if len(line) <= 8 and line.isupper():
