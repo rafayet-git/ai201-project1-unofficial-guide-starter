@@ -12,8 +12,6 @@ This guide will make it easier for users to find a perfect smartphone in their b
 
 ## Documents
 
-<!-- List your specific sources: URLs, subreddit names, forum threads, or file descriptions.
-     Aim for at least 10 sources that together cover different subtopics or perspectives within your domain. -->
 | # | Source | Type | URL or file path |
 |---|--------|------|-----------------|
 | 1 | Best entry-level smartphones guide | Buyer's guide | https://www.gsmarena.com/best_entry_level_smartphones_buyers_guide-review-2034.php |
@@ -53,11 +51,11 @@ This guide will make it easier for users to find a perfect smartphone in their b
 
 | # | Question | Expected answer |
 |---|----------|-----------------|
-| 1 | What phones have the longest battery life in testing? | The Moto G at 19 hours |
-| 2 | What phones have the best camera? | Pixel 9a for photography/software processing; CMF Phone 2 Pro for its 50MP telephoto |
+| 1 | What phones under $300 have the longest battery life in testing? | The Moto G at 19 hours |
+| 2 | What phones under $300 have the best camera? | Pixel 9a for photography/software processing; CMF Phone 2 Pro for its 50MP telephoto |
 | 3 | Does the CMF Phone 2 / Pixel 9a have overheating issues? | Pixel 9a: yes, owners report it gets warm even just browsing Chrome. CMF Phone 2 Pro: no notable overheating reported |
 | 4 | What downsides do reviewers report about the CMF Phone 2 / Pixel 9a? | CMF Phone 2 Pro: no charger in box, only IP54, weak speaker, no eSIM. Pixel 9a: large bezels, thermal warmth, performance complaints |
-| 5 | How many updates/years of updates does the CMF Phone 2 / Pixel 9a have? | CMF Phone 2 Pro: 3 major OS updates. Pixel 9a: seven years of updates. |
+| 5 | How many updates does the CMF Phone 2 / Pixel 9a get? | CMF Phone 2 Pro: 3 major OS updates. Pixel 9a: seven years of updates. |
 
 ---
 
@@ -108,6 +106,6 @@ This guide will make it easier for users to find a perfect smartphone in their b
 
 **Milestone 3 — Ingestion and chunking:** Using Claude, i will provide the Chunking Strategy section and ask it to implement chunk_text() with fixed chunking and a 20% overlap, I will verifiy it by printing the chunk count and ensuring that the chunking algorithim does not split sentences.
 
-**Milestone 4 — Embedding and retrieval:** I'll provide Claude my Retrieval Appriach section ad ask it to embed chunks with my provided model and store them in ChromaDB, as well as a top-k query function. I will verify this by querying my questions and checking if the returned chunks are on-topic.
+**Milestone 4 — Embedding and retrieval:** I'll provide Claude my Retrieval Approach section and ask it to embed chunks with my provided model and store them in ChromaDB, as well as a top-k query function. I will verify this by querying my questions and checking if the returned chunks are on-topic.
 
 **Milestone 5 — Generation and interface:** Using Claude, I will provide my grounding requirements: answer only from the retrieved chunks, refusing if the context does not contain the answer, and cite the source of each claim. I will ask it to write the Groq prompt that formats the top-k=4 chunks into the context and enforces those rules, plus a Streamlit interface with a query box that displays the answer and its cited sources. I will verify by running my 5 evaluation questions and confirming sources appear, and by asking an out-of-domain question (unrelated to phones or a flagship smartphone) to confirm it refuses instead of hallucinating.
