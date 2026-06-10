@@ -31,11 +31,11 @@ This guide will make it easier for users to find a perfect smartphone in their b
 
 ## Chunking Strategy
 
-**Chunk size:** Semantic chunking per-paragraph
+**Chunk size:** ~600 characters, line-aware
 
-**Overlap:** 20%
+**Overlap:** 20% of chunk size
 
-**Reasoning:** Most of our articles are composed of multiple paragraphs, which are usually talking about different ideas. However, some information provided in the previous or next paragrang can give slightly more context to the paragraph, so the overlap is helpful.
+**Reasoning:** I originally planned paragraph-based semantic chunking (as we mainly had articles with large paragraphs with different topics), but PDF extraction produces no paragraph breaks, as each line visually is on a separate line when extracted. So instead the pipeline packs multiple lines into chunks up to a 600-character cap, without ever splitting a line mid-word. This keeps individual opinions and review sentences intact.The 20% overlap carries context across boundaries so a fact spanning two chunks still appears whole.
 
 ---
 
@@ -77,7 +77,7 @@ This guide will make it easier for users to find a perfect smartphone in their b
 [1] Ingestion - pdfplumber / file read, strip HTML
         |
         v
-[2] Chunking - paragraph-aware semantic chunking, 20% overlap
+[2] Chunking -  fixed 600-char chunking, 20% overlap
         |
         v
 [3] Embedding + Store - all-MiniLM-L6-v2 (sentence-transformers) -> ChromaDB
@@ -106,7 +106,7 @@ This guide will make it easier for users to find a perfect smartphone in their b
      "I'll give Claude my Chunking Strategy section and ask it to implement chunk_text()
      with my specified chunk size and overlap" is a plan. -->
 
-**Milestone 3 — Ingestion and chunking:** Using Claude, i will provide the Chunking Strategy section and ask it to implement chunk_text() with semantic chunking and a 20% overlap, I will verifiy it by printing the chunk count and ensuring that the chunking algorithim does not split sentences.
+**Milestone 3 — Ingestion and chunking:** Using Claude, i will provide the Chunking Strategy section and ask it to implement chunk_text() with fixed chunking and a 20% overlap, I will verifiy it by printing the chunk count and ensuring that the chunking algorithim does not split sentences.
 
 **Milestone 4 — Embedding and retrieval:** I'll provide Claude my Retrieval Appriach section ad ask it to embed chunks with my provided model and store them in ChromaDB, as well as a top-k query function. I will verify this by querying my questions and checking if the returned chunks are on-topic.
 
