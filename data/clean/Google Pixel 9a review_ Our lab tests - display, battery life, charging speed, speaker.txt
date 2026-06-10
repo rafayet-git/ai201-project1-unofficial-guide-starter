@@ -41,28 +41,21 @@ TIP US 2.1M 160K RSS EV MERCH L OG IN S IGN UP
 Max display brightness test
 White test pattern, 75% fill (nits)
 Manual mode Auto mode
-222222222333333333333333333111111111
 Mitsubishi shows the Eclipse Pixel 9 Pro
 Sportback, which looks very familiar 6.3" LTPO OLED 1280 x 2856 px
-Lucid Gravity gets hands-free highway 222222222222222222333333333222222222
 Pixel 9
 driving, adaptive beam headlights
 through new update 6.3" OLED 1080 x 2424 px
 Apple introduces new CarPlay features
-111111111999999999333333333000000000
 Pixel 9a
 with iOS 27, video apps to be allowed
 6.3" pOLED 1080 x 2424 px
-111111111555555555000000000888888888
 Pixel 8a
 6.1" OLED 1080 x 2400 px
-111111111444444444777777777888888888
 Poco F7 Pro
 6.67" AMOLED 1440 x 3200 px
-111111111444444444444444444666666666
 Pixel 8
 6.2" LTPO OLED 1080 x 2400 px
-Motorola 111111111333333333777777777666666666
 Edge 60
 Fusion 6.67" LTPO OLED 1220 x 2712 px
 Just like the Pixel 9, the Pixel 9a has a 120Hz maximum refresh rate. Google doesn't let users
@@ -131,25 +124,18 @@ TIP US 2.1M 160K RSS EV MERCH L OG IN S IGN UP
 Charging speed
 in 15 min in 30 min Time to full charge
 (from 0%)
-888888888333333333%%%%%%%%%
 Poco X7 Pro
 6000 mAh 90W Xiaomi HyperCharge
-666666666555555555%%%%%%%%%
 Galaxy A56
 5000 mAh 45W PowerDelivery
-555555555666666666%%%%%%%%%
 Pixel 9 Pro
 4700 mAh 45W PD
 Galaxy S24
-555555555666666666%%%%%%%%%
 4700 mAh 25W PD
-555555555555555555%%%%%%%%%
 Pixel 9
 4700 mAh 45W PD
-444444444777777777%%%%%%%%%
 Pixel 9a
 5100 mAh 23W USB-PD
-333333333333333333%%%%%%%%%
 Pixel 8a
 4492 mAh 18W PD
 The Pixel 9a's charging rate is anything but fast. The phone takes over an hour and a half to

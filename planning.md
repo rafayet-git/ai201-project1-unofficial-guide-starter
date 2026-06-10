@@ -57,7 +57,7 @@ This guide will make it easier for users to find a perfect smartphone in their b
 | 2 | What phones under $300 have the best camera? | Pixel 9a for photography/software processing; CMF Phone 2 Pro for its 50MP telephoto |
 | 3 | Does the CMF Phone 2 / Pixel 9a have overheating issues? | Pixel 9a: yes, owners report it gets warm even just browsing Chrome. CMF Phone 2 Pro: no notable overheating reported |
 | 4 | What downsides do reviewers report about the CMF Phone 2 / Pixel 9a? | CMF Phone 2 Pro: no charger in box, only IP54, weak speaker, no eSIM. Pixel 9a: large bezels, thermal warmth, performance complaints |
-| 5 | How many years of security updates does the CMF Phone 2 / Pixel 9a get? | CMF Phone 2 Pro: 6 years. Pixel 9a: 7 years. |
+| 5 | How many years of security updates does the CMF Phone 2 / Pixel 9a get? | CMF Phone 2 Pro: 3 major OS updates. Pixel 9a: seven years of updates. |
 
 ---
 

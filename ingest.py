@@ -12,6 +12,7 @@ from pathlib import Path
 ## configuration
 
 DOCS_DIR = Path("documents")
+SOURCES_FILE = DOCS_DIR / "sources.json"   # maps each PDF filename -> real URL
 RAW_DIR = Path("data/raw")
 CLEAN_DIR = Path("data/clean")
 CHUNKS_FILE = Path("data/chunks.jsonl")
@@ -40,8 +41,8 @@ BRAND_TOKENS = {
 }
 # Footer pagination 
 FOOTER_RE = re.compile(r"^\d+\s+of\s+\d+\s+\d+/\d+/\d+")
-# Bold text in GSMArena PDFs renders every character doubled ("AAnnddrrooiidd").
-DOUBLED_RE = re.compile(r"(?:([A-Za-z])\1){3,}")
+# Bold text in GSMArena PDFs renders every character doubled ("AAnnddrrooiidd"),
+DOUBLED_RE = re.compile(r"(?:([A-Za-z0-9])\1){3,}")
 # Deal-box sidebar rows carrying a currency price ("£999.00", "$749").
 PRICE_RE = re.compile(r"[£$€]\s*[\d,]+")
 # Broken or unrendable ASCII glyphs
@@ -58,9 +59,13 @@ def load_pdf(path: Path) -> str:
             parts.append(page.extract_text() or "")
     return "\n".join(parts)
 
-def find_source_url(raw: str) -> str:
-    m = URL_RE.search(raw)
-    return m.group(0) if m else ""
+# The print-to-PDF header truncates long URLs with an ellipsis, so the URL
+# can't be reliably harvested from the page text. Instead read each document's
+# real, canonical URL from documents/sources.json (filename -> URL).
+def load_source_urls() -> dict:
+    if not SOURCES_FILE.exists():
+        raise SystemExit(f"{SOURCES_FILE} not found — needed for source attribution.")
+    return json.loads(SOURCES_FILE.read_text(encoding="utf-8"))
 
 def _is_brand_nav(line: str) -> bool:
     words = [w for w in re.split(r"\s+", line.lower()) if w.isalpha()]
@@ -158,13 +163,18 @@ def main() -> None:
     if not pdfs:
         raise SystemExit(f"No PDFs found in {DOCS_DIR}/")
 
+    source_urls = load_source_urls()
+    missing = [p.name for p in pdfs if p.name not in source_urls]
+    if missing:
+        raise SystemExit(f"No URL in sources.json for: {missing}")
+
     all_records = []
     summary = []
 
     for pdf_path in pdfs:
         stem = pdf_path.stem
         raw = load_pdf(pdf_path)
-        url = find_source_url(raw)
+        url = source_urls[pdf_path.name]
         (RAW_DIR / f"{stem}.txt").write_text(raw, encoding="utf-8")
 
         cleaned = clean_text(raw, url)
